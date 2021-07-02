@@ -3,4 +3,6 @@ class Diary < ApplicationRecord
 
   validates :title, :kind, presence: true
   validates :expiration, absence: true, if: :public_kind?
+
+  has_many :notes
 end
