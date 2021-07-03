@@ -41,7 +41,7 @@ module API
       end
 
       def diary_params
-        params.require(:diary).permit(:title, :enum, :expiration)
+        params.require(:diary).permit(:title, :kind, :expiration)
       end
     end
   end
