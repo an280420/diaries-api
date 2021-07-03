@@ -8,7 +8,7 @@
 
 Diary.destroy_all
 
-time_expiration = DateTime.now + 600
+time_expiration = Time.now + 600
 
 diaries = [
   diary1 = Diary.create(title: "Дневник1", kind: "public"),
