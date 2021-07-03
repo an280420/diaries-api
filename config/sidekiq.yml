@@ -1,0 +1,4 @@
+:schedule:
+  destroyer_worker:
+    every: 10m   # Runs every 10 minutes
+    class: DestroyerWorker
