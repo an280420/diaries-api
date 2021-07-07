@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  root 'api/v1/diaries#index'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
