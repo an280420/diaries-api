@@ -26,31 +26,19 @@ rails db:migrate
 rails db:seed
 ```
 Для работы в вашей системе должен быть установлен Redis
-В приложении появяться четыре дневника и у каждого дневника будут три записи. Каждый дневник имеет свой статус puclic или private.
+В приложении появятся четыре дневника и у каждого дневника будут три записи. Каждый дневник имеет свой статус puclic или private.
 У дневников private может быть срок.
+Запустите приложение
+```
+rails s
+```
+И перейдите по адресу http://localhost:3000/ или http://localhost:3000/api/v1/diaries/
+
 Приложение позволяет запускать отложенные задачи. 
-Запустите sidekiq
+Запустите sidekiq в отдельном окне терминала
 ```
 bundle exec sidekiq
 ```
 Воркер будет проверять каждые десять минут есть ли дневники с истекшим сроком и будет их удалять. Подождите десять минут и обновите страницу и вы увидите, что два дневника были удалены
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Внимание веб интерфейс sidekiq на данный момент не настроен
